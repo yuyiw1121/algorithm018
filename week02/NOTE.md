@@ -7,7 +7,7 @@
  - 获取，添加，删除 O（1）
  - 最坏情况（链表过长，哈希表过小时发生） O（n）
 
- ## [isAnagram] (242_isAnagram.java)
+ ## [isAnagram](242_isAnagram.java)
  ### 1. 暴力解法
  sort --> if(s == t) ? 
  runtime: O(nlogn)
