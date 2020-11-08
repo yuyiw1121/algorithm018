@@ -2,19 +2,19 @@
 
 ## 递归 recursion
 ### 基本结构
-public void recur(int level, int param) { 
-  // terminator 
-  if (level > MAX_LEVEL) { // 递归终结条件
-    // process result 
-    return; 
-  }
-  // process current logic 
-  process(level, param); // 处理当前层逻辑
-  // drill down 
-  recur( level: level + 1, newParam); // 下探到下一层
-  // restore current status 
-  // 有需要的话可清理当前层
-}
+	public void recur(int level, int param) { 
+	// terminator 
+	if (level > MAX_LEVEL) { // 递归终结条件
+		// process result 
+		return; 
+	}
+	// process current logic 
+	process(level, param); // 处理当前层逻辑
+	// drill down 
+	recur( level: level + 1, newParam); // 下探到下一层
+	// restore current status 
+	// 有需要的话可清理当前层
+	}
 
 ### 思维要点
 	- 不要进行人肉递归
@@ -23,27 +23,27 @@ public void recur(int level, int param) {
   
 ## 分治 divide & conquer
 ### 模板
-private static int divide_conquer(Problem problem, ...) {
-	// Recursion terminator
-	if(problem == NULL) {
-		int res = proceee_last_result();
-		return res;
-	}
-	
-	// Prepare date
-	subProblem = split_problem(problem)
-	
-	// Conquer subproblems
-	res0 = divide_conquer(subProblems[0])	
-	res1 = divide_conquer(subProblems[1])
-	
-	// Process and generate the final result
-	result = process_result(res0, res1);
+	private static int divide_conquer(Problem problem, ...) {
+		// Recursion terminator
+		if(problem == NULL) {
+			int res = proceee_last_result();
+			return res;
+		}
+		
+		// Prepare date
+		subProblem = split_problem(problem)
+		
+		// Conquer subproblems
+		res0 = divide_conquer(subProblems[0])	
+		res1 = divide_conquer(subProblems[1])
+		
+		// Process and generate the final result
+		result = process_result(res0, res1);
 
-	// Revert the current level states if needed
+		// Revert the current level states if needed
 
-	return result;
-}	
+		return result;
+	}	
 重点：找出可以重复运算的子问题
 
 ## 回溯 Backtracking
